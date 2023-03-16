@@ -9,6 +9,7 @@
 	import { EventType } from '../stubs/task/v1beta/task';
 	import Login from './auth/Login.svelte';
 	import Logout from './auth/Logout.svelte';
+	import Update from './user/Update.svelte';
 
 	export let headerHeight;
 
@@ -18,7 +19,7 @@
 	};
 
 	const handleSession = () => {
-		modal.open(($username ? Logout : Login) as any);
+		modal.open(($username ? Update : Login) as any);
 	};
 </script>
 
